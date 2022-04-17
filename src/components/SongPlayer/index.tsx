@@ -2,7 +2,6 @@ import PlayCircle from '@mui/icons-material/PlayCircle';
 import SkipNext from '@mui/icons-material/SkipNext';
 import SkipPrevious from '@mui/icons-material/SkipPrevious';
 import { Button, ButtonGroup } from '@mui/material';
-import AppBar from '@mui/material/AppBar';
 import LinearProgress from '@mui/material/LinearProgress';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -28,7 +27,7 @@ const renderButtonGroup = () => (
 const SongPlayer: React.FC<SongPlayerProps> = ({ actualTime, remainingTime }) => {
   const classes = useStyles();
   return (
-    <AppBar position="static">
+    <div>
       <Toolbar variant="dense">
         <Typography>Image</Typography>
         <div className={classes.buttonGroup}>
@@ -38,7 +37,7 @@ const SongPlayer: React.FC<SongPlayerProps> = ({ actualTime, remainingTime }) =>
           <Typography>{remainingTime}</Typography>
         </div>
       </Toolbar>
-    </AppBar>
+    </div>
   );
 };
 
